@@ -69,7 +69,7 @@ def filter_proxies(all_proxies):
     ret_proxies = []
     proxies_server = set()
     for proxy in all_proxies:
-        if proxy["cipher"] is not None and proxy["cipher"] == "none":
+        if "cipher" in proxy.keys() and proxy["cipher"] == "none":
             continue
         if proxy["server"] not in proxies_server:
             proxies_server.add(proxy["server"])
