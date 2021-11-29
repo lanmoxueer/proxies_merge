@@ -2,7 +2,8 @@ name: "proxies merge"
 
 on:
   schedule:
-    - cron: '0/3 * * * *'  
+    - cron: '0/3 * * * *'
+  workflow_dispatch:
 jobs:
   proxies_merge:
     name: merge proxies
@@ -33,7 +34,7 @@ jobs:
               git config --local user.email "lanmoxueer@163.com"
               git config --local user.name "lanmoxueer"
               modify=`git diff HEAD`
-              if [ "$modify"x == ""x ];then
+              if [ "$modify"x != ""x ];then
                 git add .
                 git commit -m "`date '+%Y-%m-%d %H:%M:%S'`" #动态提交信息
                 git push -u origin main && echo "Git Pushed Origin"
