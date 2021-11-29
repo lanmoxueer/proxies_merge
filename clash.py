@@ -15,7 +15,7 @@ urls = [
     "https://raw.githubusercontent.com/vpei/Free-Node-Merge/main/out/clash.yaml",
     "https://raw.githubusercontent.com/oslook/clash-freenode/main/clash.yaml",
     "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml",
-    "https://raw.githubusercontent.com/anaer/Sub/main/clash.yam",
+    "https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml",
     "https://raw.githubusercontent.com/alanbobs999/TopFreeProxies/master/sub/sub_merge_yaml.yml",
     "https://raw.githubusercontent.com/clashconfig/online/main/wevpn.yml",
     "https://raw.githubusercontent.com/baby610/Clash/main/ClashSC",
