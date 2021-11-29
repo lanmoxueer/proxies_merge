@@ -6,18 +6,20 @@ from ruamel.yaml import YAML
 #import yaml
 
 urls = [
-    "https://cdn.jsdelivr.net/gh/anaer/Sub@main/clash.yaml",
-    "https://ghproxy.com/https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml",
-    "https://cdn.jsdelivr.net/gh/oslook/clash-freenode@main/clash.yaml",
-    "https://cdn.jsdelivr.net/gh/gooooooooooooogle/Clash-Config@main/Clash.yaml",
-    "https://raw.fastgit.org/vpei/Free-Node-Merge/main/out/clash.yaml",
-    "https://dweb.link/ipns/k51qzi5uqu5dlfnig6lej7l7aes2d5oed6a4435s08ccftne1hq09ac1bulz2f/clash.yaml",
-    "https://cdn.jsdelivr.net/gh/jw853355718/clash_233@master/speed_ignore_ssl.yaml",
-    "https://cdn.jsdelivr.net/gh/jw853355718/clash_233@master/speed.yaml",
-    "https://cdn.jsdelivr.net/gh/jw853355718/clash_233@master/speed_short.yaml",
-    "https://cdn.jsdelivr.net/gh/chfchf0306/clash@main/clash",
     "https://cdn.jsdelivr.net/gh/AzadNetCH/Clash@main/AzadNet.yml",
-    "https://cdn.jsdelivr.net/gh/anaer/Sub@main/clash.yaml",
+    "https://raw.githubusercontent.com/chfchf0306/clash/main/clash",
+    "https://raw.githubusercontent.com/jw853355718/clash_233/master/speed.yaml",
+    "https://raw.githubusercontent.com/jw853355718/clash_233/master/speed_ignore_ssl.yaml",
+    "https://raw.githubusercontent.com/jw853355718/clash_233/master/speed_short.yaml",
+    "https://raw.githubusercontent.com/gooooooooooooogle/Clash-Config/main/Clash.yaml",
+    "https://raw.githubusercontent.com/vpei/Free-Node-Merge/main/out/clash.yaml",
+    "https://raw.githubusercontent.com/oslook/clash-freenode/main/clash.yaml",
+    "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml",
+    "https://raw.githubusercontent.com/anaer/Sub/main/clash.yam",
+    "https://raw.githubusercontent.com/alanbobs999/TopFreeProxies/master/sub/sub_merge_yaml.yml",
+    "https://raw.githubusercontent.com/clashconfig/online/main/wevpn.yml",
+    "https://raw.githubusercontent.com/baby610/Clash/main/ClashSC",
+    "https://raw.githubusercontent.com/mohsenhafezquran/ClashVPN/main/Clash",
 ]
 
 
@@ -27,6 +29,9 @@ def get_yaml_content(url):
         result = requests.get(url)
     except Exception as e:
         print(e)
+        return ""
+
+    if result.status_code != 200:
         return ""
 
     content = result.content.decode('utf-8')
