@@ -26,6 +26,11 @@ urls = [
 def get_yaml_content(url):
     print(url)
     try:
+        '''proxies = {
+            'http': '127.0.0.1:10908',
+            'https': '127.0.0.1:10908'
+        }
+        result = requests.get(url, proxies=proxies)'''
         result = requests.get(url)
     except Exception as e:
         print(e)
@@ -35,7 +40,7 @@ def get_yaml_content(url):
         return ""
 
     content = result.content.decode('utf-8')
-    pattern = re.compile(r'(name|password): ([^,\{\}\n"]+)([,\}])')
+    pattern = re.compile(r'(name|password|ws-path): ([^,\{\}\n"]+)([,\}])')
     #print(re.findall(pattern, content))
     content = re.sub(pattern, r'\1: "\2"\3', content)
     #print(content)
@@ -44,10 +49,14 @@ def get_yaml_content(url):
 
 def get_proxies(content):
     yaml = YAML(typ='safe')
-    with io.BytesIO() as buf:
-        buf.write(content.encode('utf-8'))
-        buf.flush()
-        data = yaml.load(buf.getvalue())
+    try:
+        with io.BytesIO() as buf:
+            buf.write(content.encode('utf-8'))
+            buf.flush()
+            data = yaml.load(buf.getvalue())
+    except Exception as e:
+        print(e)
+        return []
 
     return data["proxies"]
 
