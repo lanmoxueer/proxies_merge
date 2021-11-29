@@ -39,4 +39,4 @@ jobs:
               git config --local user.name "lanmoxueer"
               git add .
               git commit -m "`date '+%Y-%m-%d %H:%M:%S'`" #动态提交信息
-              git push -u origin master && echo "Git Pushed Origin"
+              git push -u origin main && echo "Git Pushed Origin"
