@@ -65,10 +65,12 @@ def get_all_proxies():
     return all_proxies
 
 
-def dedup_proxies(all_proxies):
+def filter_proxies(all_proxies):
     ret_proxies = []
     proxies_server = set()
     for proxy in all_proxies:
+        if proxy["cipher"] is not None and proxy["cipher"] == "none":
+            continue
         if proxy["server"] not in proxies_server:
             proxies_server.add(proxy["server"])
             ret_proxies.append(proxy)
@@ -104,7 +106,7 @@ def write_yaml(all_proxies, names):
 def main():
     all_proxies = get_all_proxies()
     #print(all_proxies)
-    all_proxies = dedup_proxies(all_proxies)
+    all_proxies = filter_proxies(all_proxies)
     all_proxies, names = rename_proxies(all_proxies)
     write_yaml(all_proxies, names)
 
