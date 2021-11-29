@@ -3,11 +3,6 @@ name: "proxies merge"
 on:
   schedule:
     - cron: '0/3 * * * *'  
-  #push:
-  #  branches:
-  #     - master
-
-  workflow_dispatch:
 jobs:
   proxies_merge:
     name: merge proxies
