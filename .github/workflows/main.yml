@@ -46,3 +46,4 @@ jobs:
             dst: gitee/lanmoxueer
             dst_key: ${{ secrets.GITEE_RSA }}
             dst_token: ${{ secrets.GITEE_TOKEN }}
+            white_list: "proxies_merge"
