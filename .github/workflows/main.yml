@@ -47,3 +47,5 @@ jobs:
             dst_key: ${{ secrets.GITEE_RSA }}
             dst_token: ${{ secrets.GITEE_TOKEN }}
             white_list: "proxies_merge"
+            force_update: true
+            debug: true
