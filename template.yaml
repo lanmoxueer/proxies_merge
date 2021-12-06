@@ -4,6 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 external-controller: :9090
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  enhanced-mode: redir-host # redir-host or fake-ip
+  # fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
+  use-hosts: true # lookup hosts and return IP record
+  nameserver:
+    - 119.29.29.29 # DNSpod DNS 17ms
+    - 223.5.5.5 # 阿里 19ms
+    - 172.28.2.2
+  # 提供 fallback 时，如果GEOIP非 CN 中国时使用 fallback 解析
+  fallback:
+    - tls://8.8.8.8:853 # Google DNS over TLS
+    - tls://8.8.4.4:853 # cloudflare DNS over TLS
+    - https://1.1.1.1/dns-query # cloudflare DNS over HTTPS
+    - https://dns.google/dns-query # Google DNS over HTTPS
+  # 强制DNS解析使用`fallback`配置
+  fallback-filter:
+    # true: CN使用nameserver解析，非CN使用fallback
+    geoip: true
+    # geoip设置为false时有效： 不匹配`ipcidr`地址时会使用`nameserver`结果，匹配`ipcidr`地址时使用`fallback`结果。
+    ipcidr:
+      - 240.0.0.0/4
 proxies:
 proxy-groups:
   - name: 节点选择
@@ -15,18 +39,19 @@ proxy-groups:
   - name: 自动选择
     type: url-test
     url: https://www.google.com/
-    interval: 1000
-    tolerance: 50
+    interval: 300
+    tolerance: 500
     proxies: 
   - name: 故障转移
     type: fallback
     url: https://www.google.com/
-    interval: 1000
+    interval: 300
     proxies:
   - name: 负载均衡
     type: load-balance
     url: https://www.google.com/
-    interval: 1000
+    interval: 300
+    strategy: round-robin
     proxies:
 rule-providers:
   reject:
