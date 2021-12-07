@@ -80,6 +80,9 @@ def filter_proxies(all_proxies):
     for proxy in all_proxies:
         if "cipher" in proxy.keys() and proxy["cipher"] == "none":
             continue
+        if "type" in proxy.keys() and proxy["type"] == "trojan":
+            continue
+            
         if proxy["server"] not in proxies_server:
             proxies_server.add(proxy["server"])
             ret_proxies.append(proxy)
