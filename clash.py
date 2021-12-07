@@ -40,7 +40,7 @@ def get_yaml_content(url):
         return ""
 
     content = result.content.decode('utf-8')
-    pattern = re.compile(r'(name|password|ws-path): ([^,\{\}\n"]+)([,\}])')
+    pattern = re.compile(r'(name|password|ws-path|type): ([^,\{\}\n"]+)([,\}])')
     #print(re.findall(pattern, content))
     content = re.sub(pattern, r'\1: "\2"\3', content)
     #print(content)
@@ -80,7 +80,7 @@ def filter_proxies(all_proxies):
     for proxy in all_proxies:
         if "cipher" in proxy.keys() and proxy["cipher"] == "none":
             continue
-        if "type" in proxy.keys() and proxy["type"] == "trojan":
+        if "type" not in proxy.keys():
             continue
             
         if proxy["server"] not in proxies_server:
