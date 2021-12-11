@@ -3166,37 +3166,35 @@ proxies:
   tls: false, type: vmess, uuid: 7277f857-33f4-3b9a-afcc-3ee864fa833e, ws-path: /ia35}
 - {alterId: 10, cipher: auto, name: '00718', network: ws, port: 80, server: usjjs.52jjyun.top,
   tls: false, type: vmess, uuid: eec50f48-ae15-46fb-8e4f-9b0e10ab1bea, ws-path: /jjyun}
-- {name: '00719', password: 13b36e17-e869-4b77-bf33-e5a431eac496, port: 8443, server: t1.ssrsub.com,
-  skip-cert-verify: true, sni: t1.ssrsub.com, type: trojan}
+- {name: '00719', password: 0e13b5a9-cb62-44cd-b28e-47f137624694, port: 8443, server: t6.ssrsub.com,
+  skip-cert-verify: true, sni: t6.ssrsub.com, type: trojan}
 - {name: '00720', password: 13b36e17-e869-4b77-bf33-e5a431eac496, port: 8443, server: t2.ssrsub.com,
   skip-cert-verify: true, type: trojan}
-- {name: '00721', password: 13b36e17-e869-4b77-bf33-e5a431eac496, port: 8443, server: t4.ssrsub.com,
-  skip-cert-verify: true, sni: t4.ssrsub.com, type: trojan}
-- {name: '00722', password: 13b36e17-e869-4b77-bf33-e5a431eac496, port: 8443, server: t6.ssrsub.com,
-  skip-cert-verify: true, sni: t6.ssrsub.com, type: trojan}
-- {name: '00723', password: 18e513fe-f7f4-353d-84ca-bc9646fb2528mielink, port: 443,
-  server: 170.81.43.148, skip-cert-verify: true, sni: t.me/vpnhat, type: trojan}
+- {name: '00721', password: 13b36e17-e869-4b77-bf33-e5a431eac496, port: 8443, server: t5.ssrsub.com,
+  skip-cert-verify: true, sni: t5.ssrsub.com, type: trojan}
+- {name: '00722', password: 18e513fe-f7f4-353d-84ca-bc9646fb2528mielink, port: 443,
+  server: 67.198.205.189, skip-cert-verify: true, sni: t.me/vpnhat, type: trojan}
+- {name: '00723', password: 1f3f9b92-7945-5efb-937a-90ce6040ac8b, port: 9304, server: sg-cn-hk-relay-4-40e978.dukou.info,
+  skip-cert-verify: true, sni: sgp-4-549.dukouplan3.dev, type: trojan}
 - {name: '00724', password: 1f3f9b92-7945-5efb-937a-90ce6040ac8b, port: 5307, server: tw7-5756.dukouplan3.dev,
   skip-cert-verify: true, sni: tw-07-593.dukouplan3.dev, type: trojan}
-- {name: '00725', password: 28d98f761aca9d636f44db62544628eb, port: 443, server: 81.90.189.85,
-  skip-cert-verify: true, sni: t.me%252Fvpnhat, type: trojan}
-- {name: '00726', password: MhPG7g9x2Etb4Hspsb, port: 443, server: os1-1.sstr-api.xyz,
-  skip-cert-verify: true, type: trojan}
+- {name: '00725', password: 89d892b1-4f5d-4278-982a-9aee981af088, port: 8443, server: 159.223.51.149,
+  skip-cert-verify: true, sni: t.me%2fvpnhat, type: trojan}
+- {name: '00726', password: 8ce38f17-b2be-453a-8d25-deec1a0aabba, peer: jp11.holiganfan.com,
+  port: 10088, server: jp11.holiganfan.com, skip-cert-verify: true, tfo: 1, type: trojan}
 - {name: '00727', password: a3fa58b581353bb375d2ddad0f327938, port: 443, server: 72.167.33.106,
   skip-cert-verify: true, sni: t.me/vpnhat, type: trojan}
-- {name: '00728', password: ba4fedf8c217c146, port: 3389, server: 60.249.3.125, skip-cert-verify: true,
-  type: trojan}
-- {name: '00729', password: e795f820-9391-4a9d-bfaf-b5329386f82f, port: 8443, server: t5.ssrsub.com,
-  skip-cert-verify: true, sni: t5.ssrsub.com, type: trojan}
-- {name: '00730', password: f2b8d872-3462-11e9-96d3-020b85e0a428, port: 8308, server: hk-route2-azure-hk8.dukou.info,
+- {name: '00728', password: e795f820-9391-4a9d-bfaf-b5329386f82f, port: 8443, server: t1.ssrsub.com,
+  skip-cert-verify: true, sni: t1.ssrsub.com, type: trojan}
+- {name: '00729', password: f2b8d872-3462-11e9-96d3-020b85e0a428, port: 8308, server: hk-route2-azure-hk8.dukou.info,
   skip-cert-verify: true, sni: hk-8-565.dukouplan3.dev, type: trojan}
-- {name: '00731', password: share.mjj-home.com, port: 443, server: us-02-api.mjj-home.com,
-  skip-cert-verify: true, type: trojan}
-- {alterId: 0, cipher: auto, name: '00732', port: 23333, server: vtwonet-hk-a.qjnodeip.xyz,
+- {name: '00730', password: f2b8d872-3462-11e9-96d3-020b85e0a428, port: 9308, server: sg-cn-relay-8-14852.dukou.info,
+  skip-cert-verify: true, sni: sgp-8-553.dukouplan3.dev, type: trojan}
+- {alterId: 0, cipher: auto, name: '00731', port: 23333, server: vtwonet-hk-a.qjnodeip.xyz,
   tls: false, type: vmess, uuid: ACEF9CF3-BE5E-AFF4-E916-FD0668F6BF59}
 - alterId: 0
   cipher: auto
-  name: '00733'
+  name: '00732'
   network: ws
   port: 59512
   server: 41171956-ddbb.fkunky.cn
@@ -3207,7 +3205,7 @@ proxies:
   ws-path: /v2ray
 - alterId: 0
   cipher: auto
-  name: '00734'
+  name: '00733'
   network: ws
   port: 55413
   server: az1.accesscam.org
@@ -3218,7 +3216,7 @@ proxies:
   ws-path: /v2ray
 - alterId: 2
   cipher: auto
-  name: '00735'
+  name: '00734'
   network: ws
   port: 40105
   server: kr-oracle.june628.ml
@@ -3229,7 +3227,7 @@ proxies:
   ws-path: /adobe
 - alterId: 1
   cipher: auto
-  name: '00736'
+  name: '00735'
   network: ws
   port: 10085
   server: hk1.earths.team
@@ -3240,7 +3238,7 @@ proxies:
   ws-path: /
 - alterId: 1
   cipher: auto
-  name: '00737'
+  name: '00736'
   network: ws
   port: 10086
   server: kr1.earths.team
@@ -3249,17 +3247,17 @@ proxies:
   uuid: a292b082-536e-4f70-ac9a-16914d687db7
   ws-headers: {Host: kr1.earths.team}
   ws-path: /
-- {cipher: chacha20-ietf-poly1305, name: '00738', password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS,
+- {cipher: chacha20-ietf-poly1305, name: '00737', password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS,
   port: 18333, server: 154.17.2.31, type: ss}
-- {alterId: 8, cipher: auto, name: '00739', port: 55761, server: c30s4.jamjams.net,
+- {alterId: 8, cipher: auto, name: '00738', port: 55761, server: c30s4.jamjams.net,
   tls: false, type: vmess, uuid: c5408ac6-dafa-4ce9-8cd2-87032e7258f9}
-- {cipher: chacha20-ietf-poly1305, name: '00740', password: l3Y9yKCBaT5SnpFFOe834yqIaXwSpRxz3l7D3Aua82ZgcSNZDCO6AexYDCE0Rj,
+- {cipher: chacha20-ietf-poly1305, name: '00739', password: l3Y9yKCBaT5SnpFFOe834yqIaXwSpRxz3l7D3Aua82ZgcSNZDCO6AexYDCE0Rj,
   port: 18335, server: 154.17.2.109, type: ss}
-- {alterId: 0, cipher: auto, name: '00741', port: 10086, server: vtwonet-tw-a.qjnodeip.xyz,
+- {alterId: 0, cipher: auto, name: '00740', port: 10086, server: vtwonet-tw-a.qjnodeip.xyz,
   tls: false, type: vmess, uuid: FE047729-EC0D-E1B1-38EA-E61A609F6A83}
 - alterId: 0
   cipher: auto
-  name: '00742'
+  name: '00741'
   network: ws
   port: 443
   server: jp10cf.v2cdn.org
@@ -3268,13 +3266,13 @@ proxies:
   uuid: 1DB6F21C-E8A0-C71E-27FF-2E1319C953C5
   ws-headers: {Host: jp10cf.v2cdn.org}
   ws-path: /ray
-- {alterId: 0, cipher: auto, name: '00743', port: 8311, server: vtwonet-us-a.qjnodeip.xyz,
+- {alterId: 0, cipher: auto, name: '00742', port: 8311, server: vtwonet-us-a.qjnodeip.xyz,
   tls: false, type: vmess, uuid: 8FCE27DC-F506-74FB-D710-9A0621B1D511}
-- {cipher: chacha20-ietf-poly1305, name: '00744', password: 2SYSIDnBqT5eCl736xlD4yODaXaSF9EeNp3OZcpjyC8ARYwA0zgC83aKxFZRu3,
+- {cipher: chacha20-ietf-poly1305, name: '00743', password: 2SYSIDnBqT5eCl736xlD4yODaXaSF9EeNp3OZcpjyC8ARYwA0zgC83aKxFZRu3,
   port: 18333, server: 154.17.2.117, type: ss}
 - alterId: 60
   cipher: auto
-  name: '00745'
+  name: '00744'
   network: ws
   port: 443
   server: ban4.feiclouddd.me
@@ -3283,15 +3281,15 @@ proxies:
   uuid: 6da431e4-d7b1-4f61-b3e2-f3f8d6f03bb8
   ws-headers: {Host: ban4.feiclouddd.me}
   ws-path: /sdafasfsa
-- {alterId: 2, cipher: auto, name: '00746', port: 12345, server: 103.115.67.128, tls: false,
+- {alterId: 2, cipher: auto, name: '00745', port: 12345, server: 103.115.67.128, tls: false,
   type: vmess, uuid: 2a0c0081-06fb-3cd1-a03c-fd075e3a52e9}
-- {cipher: aes-256-gcm, name: '00747', password: 4ejJ8n5ddLuYDUHGXJre2ufJ, port: 48938,
+- {cipher: aes-256-gcm, name: '00746', password: 4ejJ8n5ddLuYDUHGXJre2ufJ, port: 48938,
   server: 192.111.134.197, type: ss}
-- {alterId: 8, cipher: auto, name: '00748', port: 25661, server: c26s801.jamjams.net,
+- {alterId: 8, cipher: auto, name: '00747', port: 25661, server: c26s801.jamjams.net,
   tls: false, type: vmess, uuid: ddd1dd39-fe36-4d82-8318-475093d78ec0}
 - alterId: 64
   cipher: auto
-  name: '00749'
+  name: '00748'
   network: ws
   port: 443
   server: 170.178.177.34
@@ -3300,13 +3298,13 @@ proxies:
   uuid: fceda12e-0c12-4cda-9d64-59bfad2923c4
   ws-headers: {Host: www.14150816.xyz}
   ws-path: /path/310910211916
-- {cipher: chacha20-ietf-poly1305, name: '00750', password: YazuZ2ZE9p5Rn3CANKlD6SqC0OTSyXBIReypacD4Fae8gx87lOD3SY33jFAwCx,
+- {cipher: chacha20-ietf-poly1305, name: '00749', password: YazuZ2ZE9p5Rn3CANKlD6SqC0OTSyXBIReypacD4Fae8gx87lOD3SY33jFAwCx,
   port: 18333, server: 154.17.2.54, type: ss}
-- {alterId: 8, cipher: auto, name: '00751', port: 26813, server: c32s3.jamjams.net,
+- {alterId: 8, cipher: auto, name: '00750', port: 26813, server: c32s3.jamjams.net,
   tls: false, type: vmess, uuid: e3f9279a-5037-447b-870c-8d512c32f979}
 - alterId: 64
   cipher: auto
-  name: '00752'
+  name: '00751'
   network: ws
   port: 80
   server: 107.191.112.214
@@ -3317,7 +3315,7 @@ proxies:
   ws-path: /
 - alterId: 64
   cipher: auto
-  name: '00753'
+  name: '00752'
   network: ws
   port: 443
   server: www.17080100.xyz
@@ -3326,19 +3324,19 @@ proxies:
   uuid: 2566d00f-218c-48f7-9a36-13d3d6f1a724
   ws-headers: {Host: www.17080100.xyz}
   ws-path: /path/310910211916
-- {alterId: 8, cipher: auto, name: '00754', port: 55761, server: c30s3.jamjams.net,
+- {alterId: 8, cipher: auto, name: '00753', port: 55761, server: c30s3.jamjams.net,
   tls: false, type: vmess, uuid: c5408ac6-dafa-4ce9-8cd2-87032e7258f9}
-- {cipher: chacha20-ietf-poly1305, name: '00755', password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS,
+- {cipher: chacha20-ietf-poly1305, name: '00754', password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS,
   port: 18333, server: 154.17.2.160, type: ss}
-- {cipher: chacha20-ietf-poly1305, name: '00756', password: ZECSlaTZea5jFO736FA3Ry3DaXRA2qNx0pceYDzKCuYS8gl3B4p8InwyDCOSx9,
+- {cipher: chacha20-ietf-poly1305, name: '00755', password: ZECSlaTZea5jFO736FA3Ry3DaXRA2qNx0pceYDzKCuYS8gl3B4p8InwyDCOSx9,
   port: 18332, server: 154.17.2.211, type: ss}
-- {cipher: aes-256-gcm, name: '00757', password: suucSeVLmt6PQKAP77NtGw9x, port: 49339,
+- {cipher: aes-256-gcm, name: '00756', password: suucSeVLmt6PQKAP77NtGw9x, port: 49339,
   server: 172.241.114.87, type: ss}
-- {cipher: aes-256-gcm, name: '00758', password: 4ejJ8n5ddLuYDUHGXJre2ufJ, port: 48938,
+- {cipher: aes-256-gcm, name: '00757', password: 4ejJ8n5ddLuYDUHGXJre2ufJ, port: 48938,
   server: 212.102.40.68, type: ss}
 - alterId: 64
   cipher: auto
-  name: '00759'
+  name: '00758'
   network: ws
   port: 443
   server: 154.84.1.217
@@ -3347,11 +3345,11 @@ proxies:
   uuid: 130c9f2e-42b1-4ebf-b345-e26456a061f9
   ws-headers: {Host: www.05222027.xyz}
   ws-path: /footers
-- {cipher: aes-256-gcm, name: '00760', password: 4ejJ8n5ddLuYDUHGXJre2ufJ, port: 48938,
+- {cipher: aes-256-gcm, name: '00759', password: 4ejJ8n5ddLuYDUHGXJre2ufJ, port: 48938,
   server: 198.8.92.69, type: ss}
 - alterId: 64
   cipher: auto
-  name: '00761'
+  name: '00760'
   network: ws
   port: 443
   server: 46.182.107.154
@@ -3360,15 +3358,15 @@ proxies:
   uuid: 130c9f2e-42b1-4ebf-b345-e26456a061f9
   ws-headers: {Host: www.05222027.xyz}
   ws-path: /footers
-- {alterId: 8, cipher: auto, name: '00762', port: 10273, server: c19s5.jamjams.net,
+- {alterId: 8, cipher: auto, name: '00761', port: 10273, server: c19s5.jamjams.net,
   tls: false, type: vmess, uuid: 4062c2dc-840e-4b96-86b8-0c5a15e03efb}
-- {cipher: aes-256-gcm, name: '00763', password: CUndSZnYsPKcu6Kj8THVMBHD, port: 39772,
+- {cipher: aes-256-gcm, name: '00762', password: CUndSZnYsPKcu6Kj8THVMBHD, port: 39772,
   server: 193.29.106.61, type: ss}
-- {cipher: aes-256-gcm, name: '00764', password: YyCBeDdYX4cadHpCkkmdJLq8, port: 43893,
+- {cipher: aes-256-gcm, name: '00763', password: YyCBeDdYX4cadHpCkkmdJLq8, port: 43893,
   server: 82.102.16.99, type: ss}
 - alterId: 64
   cipher: auto
-  name: '00765'
+  name: '00764'
   network: ws
   port: 443
   server: 46.182.107.157
@@ -3379,7 +3377,7 @@ proxies:
   ws-path: /footers
 - alterId: 1
   cipher: auto
-  name: '00766'
+  name: '00765'
   network: ws
   port: 1611
   server: jnd04.xqkj.cloud
@@ -3388,13 +3386,13 @@ proxies:
   uuid: 7a5d2e3d-36d3-4ce8-b6b6-1e852b10a08a
   ws-headers: {Host: jnd04.xqkj.cloud}
   ws-path: /
-- {cipher: aes-256-gcm, name: '00767', password: btzEYXKZxnR7g6H2vFTQK5TD, port: 49202,
+- {cipher: aes-256-gcm, name: '00766', password: btzEYXKZxnR7g6H2vFTQK5TD, port: 49202,
   server: 194.110.115.83, type: ss}
-- {alterId: 8, cipher: auto, name: '00768', port: 10273, server: c19s4.jamjams.net,
+- {alterId: 8, cipher: auto, name: '00767', port: 10273, server: c19s4.jamjams.net,
   tls: false, type: vmess, uuid: 4062c2dc-840e-4b96-86b8-0c5a15e03efb}
 - alterId: 1
   cipher: auto
-  name: '00769'
+  name: '00768'
   network: ws
   port: 50006
   server: ca2.earths.team
@@ -3403,11 +3401,11 @@ proxies:
   uuid: a292b082-536e-4f70-ac9a-16914d687db7
   ws-headers: {Host: ca2.earths.team}
   ws-path: /
-- {cipher: aes-256-gcm, name: '00770', password: BdRWC38L5JUDMTYNNxJGcUwB, port: 49396,
+- {cipher: aes-256-gcm, name: '00769', password: BdRWC38L5JUDMTYNNxJGcUwB, port: 49396,
   server: 217.138.211.219, type: ss}
 - alterId: 1
   cipher: auto
-  name: '00771'
+  name: '00770'
   network: ws
   port: 1611
   server: jnd01.xqkj.cloud
@@ -3418,7 +3416,7 @@ proxies:
   ws-path: /
 - alterId: 0
   cipher: auto
-  name: '00772'
+  name: '00771'
   network: ws
   port: 443
   server: ca01.v2net.top
@@ -3427,15 +3425,15 @@ proxies:
   uuid: 936084FA-B92E-60CC-F970-A6E4BD467CBD
   ws-headers: {Host: ca01.v2net.top}
   ws-path: /ray
-- {alterId: 8, cipher: auto, name: '00773', port: 55761, server: c30s801.jamjams.net,
+- {alterId: 8, cipher: auto, name: '00772', port: 55761, server: c30s801.jamjams.net,
   tls: false, type: vmess, uuid: c5408ac6-dafa-4ce9-8cd2-87032e7258f9}
-- {cipher: chacha20-ietf-poly1305, name: '00774', password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS,
+- {cipher: chacha20-ietf-poly1305, name: '00773', password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS,
   port: 18331, server: 154.17.5.184, type: ss}
-- {alterId: 0, cipher: auto, name: '00775', port: 8300, server: vtwonet-tw-b.qjnodeip.xyz,
+- {alterId: 0, cipher: auto, name: '00774', port: 8300, server: vtwonet-tw-b.qjnodeip.xyz,
   tls: false, type: vmess, uuid: AFB5DFB2-9197-5378-F9B5-F98798C1040D}
 - alterId: 1
   cipher: auto
-  name: '00776'
+  name: '00775'
   network: ws
   port: 21846
   server: kj3xfvid6unglwytghfq7ymawxh9pr5zce1j.quickairport.top
@@ -3444,13 +3442,13 @@ proxies:
   uuid: 8a367d30-febd-4987-bca1-b8cf7e0266fa
   ws-headers: {Host: kj3xfvid6unglwytghfq7ymawxh9pr5zce1j.quickairport.top}
   ws-path: /
-- {cipher: aes-256-gcm, name: '00777', password: 4ejJ8n5ddLuYDUHGXJre2ufJ, port: 48938,
+- {cipher: aes-256-gcm, name: '00776', password: 4ejJ8n5ddLuYDUHGXJre2ufJ, port: 48938,
   server: 217.138.207.251, type: ss}
-- {alterId: 8, cipher: auto, name: '00778', port: 25661, server: c26s4.jamjams.net,
+- {alterId: 8, cipher: auto, name: '00777', port: 25661, server: c26s4.jamjams.net,
   tls: false, type: vmess, uuid: ddd1dd39-fe36-4d82-8318-475093d78ec0}
 - alterId: 1
   cipher: auto
-  name: '00779'
+  name: '00778'
   network: ws
   port: 1611
   server: jnd06.xqkj.cloud
@@ -3459,11 +3457,11 @@ proxies:
   uuid: 7a5d2e3d-36d3-4ce8-b6b6-1e852b10a08a
   ws-headers: {Host: jnd06.xqkj.cloud}
   ws-path: /
-- {cipher: aes-256-gcm, name: '00780', password: YyCBeDdYX4cadHpCkkmdJLq8, port: 43893,
+- {cipher: aes-256-gcm, name: '00779', password: YyCBeDdYX4cadHpCkkmdJLq8, port: 43893,
   server: 194.110.115.77, type: ss}
 - alterId: 1
   cipher: auto
-  name: '00781'
+  name: '00780'
   network: ws
   port: 1619
   server: jnd09.xqkj.cloud
@@ -3472,19 +3470,19 @@ proxies:
   uuid: 7a5d2e3d-36d3-4ce8-b6b6-1e852b10a08a
   ws-headers: {Host: jnd09.xqkj.cloud}
   ws-path: /
-- {cipher: aes-256-gcm, name: '00782', password: BdRWC38L5JUDMTYNNxJGcUwB, port: 49396,
+- {cipher: aes-256-gcm, name: '00781', password: BdRWC38L5JUDMTYNNxJGcUwB, port: 49396,
   server: 84.39.114.86, type: ss}
-- {cipher: aes-256-gcm, name: '00783', password: suucSeVLmt6PQKAP77NtGw9x, port: 49339,
+- {cipher: aes-256-gcm, name: '00782', password: suucSeVLmt6PQKAP77NtGw9x, port: 49339,
   server: 91.90.123.131, type: ss}
-- {cipher: aes-256-gcm, name: '00784', password: 4ejJ8n5ddLuYDUHGXJre2ufJ, port: 48938,
+- {cipher: aes-256-gcm, name: '00783', password: 4ejJ8n5ddLuYDUHGXJre2ufJ, port: 48938,
   server: 37.120.143.117, type: ss}
-- {cipher: aes-256-gcm, name: '00785', password: YyCBeDdYX4cadHpCkkmdJLq8, port: 43893,
+- {cipher: aes-256-gcm, name: '00784', password: YyCBeDdYX4cadHpCkkmdJLq8, port: 43893,
   server: 185.232.21.53, type: ss}
-- {cipher: aes-256-gcm, name: '00786', password: YyCBeDdYX4cadHpCkkmdJLq8, port: 43893,
+- {cipher: aes-256-gcm, name: '00785', password: YyCBeDdYX4cadHpCkkmdJLq8, port: 43893,
   server: 5.253.205.179, type: ss}
 - alterId: 1
   cipher: auto
-  name: '00787'
+  name: '00786'
   network: ws
   port: 1913
   server: hl03.xqkj.cloud
@@ -3495,7 +3493,7 @@ proxies:
   ws-path: /
 - alterId: 1
   cipher: auto
-  name: '00788'
+  name: '00787'
   network: ws
   port: 1919
   server: hl09.xqkj.cloud
@@ -3504,19 +3502,19 @@ proxies:
   uuid: 7a5d2e3d-36d3-4ce8-b6b6-1e852b10a08a
   ws-headers: {Host: hl09.xqkj.cloud}
   ws-path: /
-- {cipher: aes-256-gcm, name: '00789', password: YyCBeDdYX4cadHpCkkmdJLq8, port: 43893,
+- {cipher: aes-256-gcm, name: '00788', password: YyCBeDdYX4cadHpCkkmdJLq8, port: 43893,
   server: 84.17.53.212, type: ss}
-- {cipher: aes-256-gcm, name: '00790', password: z6pH3RyttkRWhJ5tpRyt6dYk, port: 41676,
+- {cipher: aes-256-gcm, name: '00789', password: z6pH3RyttkRWhJ5tpRyt6dYk, port: 41676,
   server: 185.128.27.35, type: ss}
-- {cipher: aes-256-gcm, name: '00791', password: n8w4StnbVD9dmXYn4Ajt87EA, port: 31572,
+- {cipher: aes-256-gcm, name: '00790', password: n8w4StnbVD9dmXYn4Ajt87EA, port: 31572,
   server: 217.146.82.83, type: ss}
-- {cipher: aes-256-gcm, name: '00792', password: 4ejJ8n5ddLuYDUHGXJre2ufJ, port: 48938,
+- {cipher: aes-256-gcm, name: '00791', password: 4ejJ8n5ddLuYDUHGXJre2ufJ, port: 48938,
   server: 217.138.211.221, type: ss}
-- {cipher: aes-256-gcm, name: '00793', password: YyCBeDdYX4cadHpCkkmdJLq8, port: 43893,
+- {cipher: aes-256-gcm, name: '00792', password: YyCBeDdYX4cadHpCkkmdJLq8, port: 43893,
   server: 185.102.219.6, type: ss}
 - alterId: 1
   cipher: auto
-  name: '00794'
+  name: '00793'
   network: ws
   port: 1911
   server: hl01.xqkj.cloud
@@ -3527,7 +3525,7 @@ proxies:
   ws-path: /
 - alterId: 1
   cipher: auto
-  name: '00795'
+  name: '00794'
   network: ws
   port: 1917
   server: hl07.xqkj.cloud
@@ -3538,7 +3536,7 @@ proxies:
   ws-path: /
 - alterId: 1
   cipher: auto
-  name: '00796'
+  name: '00795'
   network: ws
   port: 1516
   server: ld06.xqkj.cloud
@@ -3549,7 +3547,7 @@ proxies:
   ws-path: /
 - alterId: 1
   cipher: auto
-  name: '00797'
+  name: '00796'
   network: ws
   port: 1912
   server: hl02.xqkj.cloud
@@ -3558,11 +3556,11 @@ proxies:
   uuid: 7a5d2e3d-36d3-4ce8-b6b6-1e852b10a08a
   ws-headers: {Host: hl02.xqkj.cloud}
   ws-path: /
-- {cipher: aes-256-gcm, name: '00798', password: CUndSZnYsPKcu6Kj8THVMBHD, port: 39772,
+- {cipher: aes-256-gcm, name: '00797', password: CUndSZnYsPKcu6Kj8THVMBHD, port: 39772,
   server: 193.29.106.5, type: ss}
 - alterId: 1
   cipher: auto
-  name: '00799'
+  name: '00798'
   network: ws
   port: 1517
   server: ld07.xqkj.cloud
@@ -3571,13 +3569,13 @@ proxies:
   uuid: 7a5d2e3d-36d3-4ce8-b6b6-1e852b10a08a
   ws-headers: {Host: ld07.xqkj.cloud}
   ws-path: /
-- {cipher: aes-256-gcm, name: '00800', password: suucSeVLmt6PQKAP77NtGw9x, port: 49339,
+- {cipher: aes-256-gcm, name: '00799', password: suucSeVLmt6PQKAP77NtGw9x, port: 49339,
   server: 193.29.106.37, type: ss}
-- {cipher: aes-256-gcm, name: '00801', password: 4ejJ8n5ddLuYDUHGXJre2ufJ, port: 48938,
+- {cipher: aes-256-gcm, name: '00800', password: 4ejJ8n5ddLuYDUHGXJre2ufJ, port: 48938,
   server: 45.134.224.20, type: ss}
 - alterId: 0
   cipher: auto
-  name: '00802'
+  name: '00801'
   network: ws
   port: 443
   server: au01.v2net.top
@@ -3588,7 +3586,7 @@ proxies:
   ws-path: /ray
 - alterId: 0
   cipher: auto
-  name: '00803'
+  name: '00802'
   network: ws
   port: 443
   server: it01.v2net.top
@@ -3597,11 +3595,11 @@ proxies:
   uuid: EB4079DC-301A-3F0B-47A1-D57B1E846DE3
   ws-headers: {Host: it01.v2net.top}
   ws-path: /ray
-- {cipher: aes-256-gcm, name: '00804', password: 4ejJ8n5ddLuYDUHGXJre2ufJ, port: 48938,
+- {cipher: aes-256-gcm, name: '00803', password: 4ejJ8n5ddLuYDUHGXJre2ufJ, port: 48938,
   server: 5.253.205.229, type: ss}
 - alterId: 1
   cipher: auto
-  name: '00805'
+  name: '00804'
   network: ws
   port: 1511
   server: ld01.xqkj.cloud
@@ -3610,11 +3608,11 @@ proxies:
   uuid: 7a5d2e3d-36d3-4ce8-b6b6-1e852b10a08a
   ws-headers: {Host: ld01.xqkj.cloud}
   ws-path: /
-- {alterId: 1, cipher: auto, name: '00806', port: 80, server: c.ddvsmvbfnbsde.tk,
+- {alterId: 1, cipher: auto, name: '00805', port: 80, server: c.ddvsmvbfnbsde.tk,
   tls: true, type: vmess, uuid: 2ca94067-30de-4aa8-b98d-a679847a9d0a}
 - alterId: 1
   cipher: auto
-  name: '00807'
+  name: '00806'
   network: ws
   port: 1513
   server: ld03.xqkj.cloud
@@ -3623,11 +3621,11 @@ proxies:
   uuid: 7a5d2e3d-36d3-4ce8-b6b6-1e852b10a08a
   ws-headers: {Host: ld03.xqkj.cloud}
   ws-path: /
-- {alterId: 0, cipher: auto, name: '00808', port: 18770, server: 163.172.214.118,
+- {alterId: 0, cipher: auto, name: '00807', port: 18770, server: 163.172.214.118,
   tls: false, type: vmess, uuid: 5d3e6e14-5828-4e88-a946-bad5c700b4d5}
 - alterId: 0
   cipher: auto
-  name: '00809'
+  name: '00808'
   network: ws
   port: 8443
   server: v6.ssrsub.com
@@ -3638,6 +3636,8 @@ proxies:
   uuid: e795f820-9391-4a9d-bfaf-b5329386f82f
   ws-headers: {Host: v6.ssrsub.com}
   ws-path: /ssrsub
+- {name: '00809', password: e795f820-9391-4a9d-bfaf-b5329386f82f, port: 8443, server: t4.ssrsub.com,
+  skip-cert-verify: false, sni: t4.ssrsub.com, type: trojan, udp: true, uuid: c7659c66-19c4-dd58-9fff-c94b80b628dd}
 - alterId: 4
   cipher: auto
   country: 🇿🇦ZA
@@ -3704,18 +3704,20 @@ proxies:
   uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
   ws-headers: {HOST: zecjk.com}
   ws-path: /ws
-- {cipher: chacha20-ietf-poly1305, name: '00818', password: 68a0f7b6-9954-4b8c-9e95-41b0d526fa78,
-  port: 2096, server: qs25.shenseven.xyz, type: ss, uuid: 682f99cf-0045-e568-1d23-ada85f57e4f3}
+- {country: 🇸🇬SG, name: '00818', password: 28d98f761aca9d636f44db62544628eb, port: 443,
+  server: 81.90.189.85, skip-cert-verify: true, type: trojan, udp: true, uuid: a15fcd59-695b-496d-6742-b0df2067d470}
 - {cipher: chacha20-ietf-poly1305, name: '00819', password: 68a0f7b6-9954-4b8c-9e95-41b0d526fa78,
+  port: 2096, server: qs25.shenseven.xyz, type: ss, uuid: 682f99cf-0045-e568-1d23-ada85f57e4f3}
+- {cipher: chacha20-ietf-poly1305, name: '00820', password: 68a0f7b6-9954-4b8c-9e95-41b0d526fa78,
   port: 2096, server: qs22.shenseven.xyz, type: ss, uuid: 075ecb1d-28e3-09fc-ec2a-eab39a690c6a}
-- {cipher: aes-256-gcm, name: '00820', password: cdBIDV42DCwnfIN, port: 8119, server: 139.99.62.207,
+- {cipher: aes-256-gcm, name: '00821', password: cdBIDV42DCwnfIN, port: 8119, server: 139.99.62.207,
   type: ss, uuid: 10bc6307-b787-5e7d-068b-76e841757beb}
-- {cipher: aes-128-cfb, name: '00821', obfs: plain, obfs-param: f5df6129134.wns.windows.com,
+- {cipher: aes-128-cfb, name: '00822', obfs: plain, obfs-param: f5df6129134.wns.windows.com,
   password: qwQm0B, port: 19078, protocol: auth_aes128_md5, protocol-param: 129134:cxCjTt,
   server: cdn.node.sg.ntt03.nekocloud.cn, type: ssr, uuid: 358bcd24-b956-9f5a-7ea4-5969a1bca1c0}
 - alterId: 0
   cipher: auto
-  name: '00822'
+  name: '00823'
   network: ws
   port: 81
   server: 45.76.49.99
@@ -3725,10 +3727,8 @@ proxies:
   uuid: fe68beaf-3492-4b78-ac34-e28da841a8ca
   ws-headers: {Host: 45.76.49.99}
   ws-path: /
-- {cipher: chacha20-ietf-poly1305, name: '00823', password: FuynHKjkzhBnmcLpaLKm,
+- {cipher: chacha20-ietf-poly1305, name: '00824', password: FuynHKjkzhBnmcLpaLKm,
   port: 8389, server: 84.17.34.8, type: ss, uuid: b146c6e6-11f2-2cbd-88a6-3e9a4004c550}
-- {country: 🇯🇵JP, name: '00824', password: 8ce38f17-b2be-453a-8d25-deec1a0aabba, port: 10088,
-  server: jp11.holiganfan.com, skip-cert-verify: true, type: trojan, udp: true, uuid: e6f3773b-e47f-996c-5729-3e4ed3c0aac7}
 - {cipher: aes-256-gcm, name: '00825', password: '@Mshare_T', port: 10086, server: 1.1.1.1,
   type: ss, uuid: 2453809b-4383-5bdc-06ac-af8f18b6dcb2}
 - alterId: 4
@@ -4879,9 +4879,11 @@ proxies:
   uuid: 4cdb016f-f14e-30b3-97d6-453c741a5c80
   ws-headers: {Host: 104.25.52.187}
   ws-path: /y475
+- {name: '00940', password: share.mjj-home.com, port: 443, server: us-02-api.mjj-home.com,
+  skip-cert-verify: false, type: trojan}
 - alterId: 1
   cipher: auto
-  name: '00940'
+  name: '00941'
   network: ws
   port: 666
   server: v1-aws-hk-04.niaoyun.online
@@ -4893,7 +4895,7 @@ proxies:
   ws-path: /niaocloud
 - alterId: 64
   cipher: auto
-  name: '00941'
+  name: '00942'
   network: ws
   port: 443
   server: 104.19.45.117
@@ -4905,7 +4907,7 @@ proxies:
   ws-path: /
 - alterId: 0
   cipher: auto
-  name: '00942'
+  name: '00943'
   network: ws
   port: 80
   server: euserv18p.ezddns.tk
@@ -4917,7 +4919,7 @@ proxies:
   ws-path: /audio.mp3
 - alterId: 64
   cipher: auto
-  name: '00943'
+  name: '00944'
   network: ws
   port: 443
   server: 104.18.7.138
@@ -4929,7 +4931,7 @@ proxies:
   ws-path: /
 - alterId: 0
   cipher: auto
-  name: '00944'
+  name: '00945'
   network: ws
   port: 443
   server: workers.dev
@@ -4941,7 +4943,7 @@ proxies:
   ws-path: /111111.online
 - alterId: 0
   cipher: auto
-  name: '00945'
+  name: '00946'
   network: ws
   port: 6666
   server: 183.179.115.79
@@ -4953,7 +4955,7 @@ proxies:
   ws-path: /
 - alterId: 0
   cipher: auto
-  name: '00946'
+  name: '00947'
   network: tcp
   port: 19303
   server: 85.117.234.184
@@ -4965,7 +4967,7 @@ proxies:
   ws-path: None
 - alterId: 10
   cipher: auto
-  name: '00947'
+  name: '00948'
   network: ws
   port: 80
   server: ru.52jjyun.top
@@ -4977,7 +4979,7 @@ proxies:
   ws-path: /jjyun
 - alterId: 1
   cipher: auto
-  name: '00948'
+  name: '00949'
   network: ws
   port: 21888
   server: 104.248.148.147
@@ -4989,7 +4991,7 @@ proxies:
   ws-path: /
 - alterId: 2
   cipher: auto
-  name: '00949'
+  name: '00950'
   network: ws
   port: 80
   server: 8.vip341.xyz
@@ -5001,7 +5003,7 @@ proxies:
   ws-path: /ny
 - alterId: 0
   cipher: auto
-  name: '00950'
+  name: '00951'
   network: ws
   port: 16666
   server: 45.79.65.237.ipssh.net
@@ -5013,7 +5015,7 @@ proxies:
   ws-path: /
 - alterId: 64
   cipher: auto
-  name: '00951'
+  name: '00952'
   network: ws
   port: 443
   server: 96.43.91.60
@@ -5025,7 +5027,7 @@ proxies:
   ws-path: /path/310910211916
 - alterId: 0
   cipher: auto
-  name: '00952'
+  name: '00953'
   network: ws
   port: 34373
   server: 18.142.46.114
@@ -5037,7 +5039,7 @@ proxies:
   ws-path: /
 - alterId: 2
   cipher: auto
-  name: '00953'
+  name: '00954'
   network: ws
   port: 80
   server: 10.vip341.xyz
@@ -5047,13 +5049,13 @@ proxies:
   uuid: 892db7e4-1e1d-3e24-9f68-55df818e6aa1
   ws-headers: {Host: 10.vip341.xyz}
   ws-path: /ny
-- {cipher: aes-256-gcm, name: '00954', password: WCuz7yrfZSCQQXSNrtGPz2HT, port: 50168,
+- {cipher: aes-256-gcm, name: '00955', password: WCuz7yrfZSCQQXSNrtGPz2HT, port: 50168,
   server: 185.108.105.129, type: ss}
-- {name: '00955', password: ba4fedf8c217c146, port: 3389, server: 120.236.197.205,
+- {name: '00956', password: ba4fedf8c217c146, port: 3389, server: 120.236.197.205,
   skip-cert-verify: false, type: trojan}
 - alterId: 0
   cipher: auto
-  name: '00956'
+  name: '00957'
   network: ws
   port: 0
   server: 感谢支持
@@ -5065,7 +5067,7 @@ proxies:
   ws-path: /
 - alterId: 64
   cipher: auto
-  name: '00957'
+  name: '00958'
   network: ws
   port: 27489
   server: 143.198.237.214
@@ -5075,17 +5077,15 @@ proxies:
   uuid: d73f027b-9a37-4e79-dd29-3a0d1e1da128
   ws-headers: {Host: 143.198.237.214}
   ws-path: /
-- {name: '00958', password: 18e513fe-f7f4-353d-84ca-bc9646fb2528mielink, port: 443,
+- {name: '00959', password: 18e513fe-f7f4-353d-84ca-bc9646fb2528mielink, port: 443,
+  server: 170.81.43.148, skip-cert-verify: false, type: trojan}
+- {name: '00960', password: 18e513fe-f7f4-353d-84ca-bc9646fb2528mielink, port: 443,
   server: 67.198.205.193, skip-cert-verify: false, type: trojan}
-- {name: '00959', password: 1f3f9b92-7945-5efb-937a-90ce6040ac8b, port: 9304, server: sg-cn-hk-relay-4-40e978.dukou.info,
-  skip-cert-verify: false, type: trojan}
-- {name: '00960', password: 89d892b1-4f5d-4278-982a-9aee981af088, port: 8443, server: 159.223.51.149,
-  skip-cert-verify: false, type: trojan}
 - {name: '00961', password: 8ce38f17-b2be-453a-8d25-deec1a0aabba, port: 10088?peer=jp10.holiganfan.com&tfo=1,
   server: jp10.holiganfan.com, skip-cert-verify: false, type: trojan}
-- {name: '00962', password: a3fa58b581353bb375d2ddad0f327938, port: 443, server: hk-server-01.selfupay.com,
+- {name: '00962', password: MhPG7g9x2Etb4Hspsb, port: 443, server: os1-1.sstr-api.xyz,
   skip-cert-verify: false, type: trojan}
-- {name: '00963', password: f2b8d872-3462-11e9-96d3-020b85e0a428, port: 9308, server: sg-cn-relay-8-14852.dukou.info,
+- {name: '00963', password: a3fa58b581353bb375d2ddad0f327938, port: 443, server: hk-server-01.selfupay.com,
   skip-cert-verify: false, type: trojan}
 - {name: '00964', password: f2b8d872-3462-11e9-96d3-020b85e0a428, port: 8304, server: shanghai-router2-hk4-5478.dukou.info,
   skip-cert-verify: false, type: trojan}
