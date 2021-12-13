@@ -80,7 +80,7 @@ def filter_proxies(all_proxies):
     for proxy in all_proxies:
         if "cipher" in proxy.keys() and proxy["cipher"] == "none":
             continue
-        if "type" not in proxy.keys():
+        if "type" not in proxy.keys() or "server" not in proxy.keys():
             continue
             
         if proxy["server"] not in proxies_server:
