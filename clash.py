@@ -42,7 +42,7 @@ def get_yaml_content(url):
     content = result.content.decode('utf-8')
     pattern = re.compile(r'(name|password|ws-path|type): ([^,\{\}\n"]+)([,\}])')
     #print(re.findall(pattern, content))
-    content = re.sub(pattern, r'\1: "\2"\3', content
+    content = re.sub(pattern, r'\1: "\2"\3', content)
     #print(content)
     return content
 
@@ -51,7 +51,7 @@ def get_proxies(content):
     yaml = YAML(typ='safe')
     try:
         with io.BytesIO() as buf:
-            buf.write(content.encode('utf-8')
+            buf.write(content.encode('utf-8'))
             buf.flush()
             data = yaml.load(buf.getvalue())
     except Exception as e:
@@ -61,7 +61,7 @@ def get_proxies(content):
     return data["proxies"]
 
 
-def get_all_proxies()
+def get_all_proxies():
     all_proxies = []
     for url in urls:
         content = get_yaml_content(url)
