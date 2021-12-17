@@ -2,7 +2,8 @@ import io
 import re
 import json
 import requests
-from ruamel.yaml import YAML
+from ruamel.yaml import YAML, ruamel
+
 #import yaml
 
 urls = [
@@ -26,12 +27,12 @@ urls = [
 def get_yaml_content(url):
     print(url)
     try:
-        '''proxies = {
+        proxies = {
             'http': '127.0.0.1:10908',
             'https': '127.0.0.1:10908'
         }
-        result = requests.get(url, proxies=proxies)'''
-        result = requests.get(url)
+        result = requests.get(url, proxies=proxies)
+        #result = requests.get(url)
     except Exception as e:
         print(e)
         return ""
@@ -40,7 +41,8 @@ def get_yaml_content(url):
         return ""
 
     content = result.content.decode('utf-8')
-    pattern = re.compile(r'(name|password|ws-path|type): ([^,\{\}\n"]+)([,\}])')
+    pattern = re.compile(r'(name|password|ws-path|type|protocol-param|obfs-param|server|servername|cipher|protocol|obfs'
+                         r'|network|Host|uuid): ([^,\{\}\n"]+)([,\}])')
     #print(re.findall(pattern, content))
     content = re.sub(pattern, r'\1: "\2"\3', content)
     #print(content)
@@ -102,9 +104,10 @@ def rename_proxies(all_proxies):
 
 
 def write_yaml(all_proxies, names):
-    yaml = YAML(typ='safe')
+    #yaml = YAML(typ='safe')
     with open("template.yaml", encoding='utf-8') as template:
-        data = yaml.load(template)
+        #data = yaml.load(template)
+        data = ruamel.yaml.round_trip_load(template)
     #print(data)
     data["proxies"] = all_proxies
     for index in range(len(data["proxy-groups"])):
@@ -112,9 +115,11 @@ def write_yaml(all_proxies, names):
             data["proxy-groups"][index]["proxies"] = names
 
     with open("output.yaml", mode="w", encoding='utf-8') as output:
-        yaml.dump(data, output)
+        #yaml.preserve_quotes = True
+        #yaml.dump(data, output)
+        ruamel.yaml.round_trip_dump(data, output, default_style='"')
     with open("output.json", mode="w", encoding='utf-8') as output2:
-        json.dump(data, output2)
+        json.dump(data, output2, ensure_ascii=False)
 
 
 def main():
