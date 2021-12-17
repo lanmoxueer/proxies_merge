@@ -27,12 +27,12 @@ urls = [
 def get_yaml_content(url):
     print(url)
     try:
-        proxies = {
+        '''proxies = {
             'http': '127.0.0.1:10908',
             'https': '127.0.0.1:10908'
         }
-        result = requests.get(url, proxies=proxies)
-        #result = requests.get(url)
+        result = requests.get(url, proxies=proxies)'''
+        result = requests.get(url)
     except Exception as e:
         print(e)
         return ""
