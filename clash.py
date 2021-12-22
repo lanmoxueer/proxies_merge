@@ -23,16 +23,28 @@ urls = [
     "https://raw.githubusercontent.com/mohsenhafezquran/ClashVPN/main/Clash",
 ]
 
+proxies = {
+    'http': '127.0.0.1:10908',
+    'https': '127.0.0.1:10908'
+}
+
+
+def test_use_proxies():
+    try:
+        result = requests.get("https://www.google.com", proxies=proxies)
+        return True
+    except Exception as e:
+        return False
+
 
 def get_yaml_content(url):
     print(url)
     try:
-        proxies = {
-            'http': '127.0.0.1:10908',
-            'https': '127.0.0.1:10908'
-        }
-        result = requests.get(url, proxies=proxies)
-        #result = requests.get(url)
+        should_use_proxies = test_use_proxies()
+        if should_use_proxies:
+            result = requests.get(url, proxies=proxies)
+        else:
+            result = requests.get(url)
     except Exception as e:
         print(e)
         return ""
