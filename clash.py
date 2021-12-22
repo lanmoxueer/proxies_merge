@@ -90,17 +90,19 @@ def get_all_proxies():
             print("content is empty")
             continue
         proxies = get_proxies(content)
-        renamed_proxies, names = rename_proxies(proxies, pos)
+        filtered_proxies = filter_proxies(proxies)
+        renamed_proxies, names = rename_proxies(filtered_proxies, pos)
+
         all_proxies.extend(renamed_proxies)
         all_proxies_names.extend(names)
     #print(all_proxies)
     return all_proxies, all_proxies_names
 
 
-def filter_proxies(all_proxies):
+def filter_proxies(proxies):
     ret_proxies = []
     proxies_server = set()
-    for proxy in all_proxies:
+    for proxy in proxies:
         if "cipher" in proxy.keys() and proxy["cipher"] == "none":
             continue
         if "type" not in proxy.keys() or "server" not in proxy.keys():
@@ -146,7 +148,6 @@ def write_yaml(all_proxies, names):
 def main():
     all_proxies, all_proxies_names = get_all_proxies()
     #print(all_proxies)
-    all_proxies = filter_proxies(all_proxies)
     write_yaml(all_proxies, all_proxies_names)
 
 
