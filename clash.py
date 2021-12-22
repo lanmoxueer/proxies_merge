@@ -54,15 +54,17 @@ def get_yaml_content(url):
 
     content = result.content.decode('utf-8')
     pattern = re.compile(r'(name|password|ws-path|type|protocol-param|obfs-param|server|servername|cipher|protocol|obfs'
-                         r'|network|Host|uuid): ([^,\{\}\n"]+)([,\}])')
+                         r'|network|Host|uuid): ([^,\{\}\n"]+)([,\}\n])')
     #print(re.findall(pattern, content))
     content = re.sub(pattern, r'\1: "\2"\3', content)
     #print(content)
-    pattern = re.compile(r'(tls|port): [\'"]([^,\{\}\n"]+)[\'"]([,\}])')
-    ret = re.findall(pattern, content)
-    if len(ret) != 0:
-        print(ret)
-    #content = re.sub(pattern, r'\1: "\2"\3', content)
+    pattern = re.compile(r'(tls|port|skip-cert-verify): [\'"]([^,\{\}\n"]+)[\'"]([,\}\n])')
+    print(re.findall(pattern, content))
+    content = re.sub(pattern, r'\1: \2\3', content)
+
+    pattern = re.compile(r'(http-opts|h2-opts): [\'"]+([,\}\n])')
+    print(re.findall(pattern, content))
+    content = re.sub(pattern, r'\1: {}\2', content)
     return content
 
 
@@ -91,7 +93,7 @@ def get_all_proxies():
             continue
         proxies = get_proxies(content)
         filtered_proxies = filter_proxies(proxies)
-        renamed_proxies, names = rename_proxies(filtered_proxies, pos)
+        renamed_proxies, names = rename_proxies(filtered_proxies, pos, len(all_proxies))
 
         all_proxies.extend(renamed_proxies)
         all_proxies_names.extend(names)
@@ -105,6 +107,8 @@ def filter_proxies(proxies):
     for proxy in proxies:
         if "cipher" in proxy.keys() and proxy["cipher"] == "none":
             continue
+        if "tls" in proxy.keys() and proxy["tls"] == "":
+            continue
         if "type" not in proxy.keys() or "server" not in proxy.keys():
             continue
             
@@ -114,10 +118,10 @@ def filter_proxies(proxies):
     return ret_proxies
 
 
-def rename_proxies(proxies, pos):
+def rename_proxies(proxies, url_pos, proxies_pos):
     ret_proxies = []
     names = []
-    count = pos * 10000 + 1
+    count = url_pos * 10000 + proxies_pos + 1
     for proxy in proxies:
         proxy["name"] = str(count).zfill(6)
         count = count + 1
