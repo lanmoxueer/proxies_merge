@@ -27,12 +27,12 @@ urls = [
 def get_yaml_content(url):
     print(url)
     try:
-        '''proxies = {
+        proxies = {
             'http': '127.0.0.1:10908',
             'https': '127.0.0.1:10908'
         }
-        result = requests.get(url, proxies=proxies)'''
-        result = requests.get(url)
+        result = requests.get(url, proxies=proxies)
+        #result = requests.get(url)
     except Exception as e:
         print(e)
         return ""
@@ -46,6 +46,11 @@ def get_yaml_content(url):
     #print(re.findall(pattern, content))
     content = re.sub(pattern, r'\1: "\2"\3', content)
     #print(content)
+    pattern = re.compile(r'(tls|port): [\'"]([^,\{\}\n"]+)[\'"]([,\}])')
+    ret = re.findall(pattern, content)
+    if len(ret) != 0:
+        print(ret)
+    #content = re.sub(pattern, r'\1: "\2"\3', content)
     return content
 
 
@@ -65,15 +70,19 @@ def get_proxies(content):
 
 def get_all_proxies():
     all_proxies = []
-    for url in urls:
-        content = get_yaml_content(url)
+    all_proxies_names = []
+    for pos in range(len(urls)):
+        content = get_yaml_content(urls[pos])
         #print(content)
         if content == "":
             print("content is empty")
             continue
         proxies = get_proxies(content)
-        all_proxies.extend(proxies)
-    return all_proxies
+        renamed_proxies, names = rename_proxies(proxies, pos)
+        all_proxies.extend(renamed_proxies)
+        all_proxies_names.extend(names)
+    #print(all_proxies)
+    return all_proxies, all_proxies_names
 
 
 def filter_proxies(all_proxies):
@@ -91,12 +100,12 @@ def filter_proxies(all_proxies):
     return ret_proxies
 
 
-def rename_proxies(all_proxies):
+def rename_proxies(proxies, pos):
     ret_proxies = []
     names = []
-    count = 1
-    for proxy in all_proxies:
-        proxy["name"] = str(count).zfill(5)
+    count = pos * 10000 + 1
+    for proxy in proxies:
+        proxy["name"] = str(count).zfill(6)
         count = count + 1
         ret_proxies.append(proxy)
         names.append(proxy["name"])
@@ -123,11 +132,10 @@ def write_yaml(all_proxies, names):
 
 
 def main():
-    all_proxies = get_all_proxies()
+    all_proxies, all_proxies_names = get_all_proxies()
     #print(all_proxies)
     all_proxies = filter_proxies(all_proxies)
-    all_proxies, names = rename_proxies(all_proxies)
-    write_yaml(all_proxies, names)
+    write_yaml(all_proxies, all_proxies_names)
 
 
 if __name__ == '__main__':
