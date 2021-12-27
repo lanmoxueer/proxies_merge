@@ -105,11 +105,15 @@ def filter_proxies(proxies):
     ret_proxies = []
     proxies_server = set()
     for proxy in proxies:
-        if "cipher" in proxy.keys() and proxy["cipher"] == "none":
+        not_support_cipher = ("none", "null", "rc4")
+        if "cipher" in proxy.keys() and proxy["cipher"] in not_support_cipher:
             continue
         if "tls" in proxy.keys() and proxy["tls"] == "":
             continue
-        if "type" not in proxy.keys() or "server" not in proxy.keys():
+        not_support_type = ("none", "null")
+        if "type" not in proxy.keys() or proxy["type"] in not_support_type:
+            continue
+        if "server" not in proxy.keys():
             continue
             
         if proxy["server"] not in proxies_server:
