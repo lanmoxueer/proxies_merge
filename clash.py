@@ -110,6 +110,8 @@ def filter_proxies(proxies):
             continue
         if "tls" in proxy.keys() and proxy["tls"] == "":
             continue
+        if "port" in proxy.keys() and not isinstance(proxy["port"], int):
+            continue
         not_support_type = ("none", "null")
         if "type" not in proxy.keys() or proxy["type"] in not_support_type:
             continue
