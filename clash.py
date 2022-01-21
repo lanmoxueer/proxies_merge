@@ -28,6 +28,7 @@ proxies = {
     'https': '127.0.0.1:10908'
 }
 
+proxies_server = set()
 
 def test_use_proxies():
     try:
@@ -103,9 +104,8 @@ def get_all_proxies():
 
 def filter_proxies(proxies):
     ret_proxies = []
-    proxies_server = set()
     for proxy in proxies:
-        not_support_cipher = ("none", "null", "rc4")
+        not_support_cipher = ("none", "null", "rc4", "aes-256-gcm")
         if "cipher" in proxy.keys() and proxy["cipher"] in not_support_cipher:
             continue
         if "tls" in proxy.keys() and proxy["tls"] == "":
@@ -118,8 +118,9 @@ def filter_proxies(proxies):
         if "server" not in proxy.keys():
             continue
             
-        if proxy["server"] not in proxies_server:
-            proxies_server.add(proxy["server"])
+        proxy_mark = proxy["server"] + ':' + proxy["port"]
+        if proxy_mark not in proxies_server:
+            proxies_server.add(proxy_mark)
             ret_proxies.append(proxy)
     return ret_proxies
 
