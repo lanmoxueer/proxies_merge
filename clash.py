@@ -118,7 +118,7 @@ def filter_proxies(proxies):
         if "server" not in proxy.keys():
             continue
             
-        proxy_mark = proxy["server"] + ':' + proxy["port"]
+        proxy_mark = proxy["server"] + ':' + str(proxy["port"])
         if proxy_mark not in proxies_server:
             proxies_server.add(proxy_mark)
             ret_proxies.append(proxy)
