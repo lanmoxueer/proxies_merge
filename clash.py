@@ -9,9 +9,6 @@ from ruamel.yaml import YAML, ruamel
 urls = [
     "https://cdn.jsdelivr.net/gh/AzadNetCH/Clash@main/AzadNet.yml",
     "https://raw.githubusercontent.com/chfchf0306/clash/main/clash",
-    "https://raw.githubusercontent.com/jw853355718/clash_233/master/speed.yaml",
-    "https://raw.githubusercontent.com/jw853355718/clash_233/master/speed_ignore_ssl.yaml",
-    "https://raw.githubusercontent.com/jw853355718/clash_233/master/speed_short.yaml",
     "https://raw.githubusercontent.com/gooooooooooooogle/Clash-Config/main/Clash.yaml",
     "https://raw.githubusercontent.com/vpei/Free-Node-Merge/main/out/clash.yaml",
     "https://raw.githubusercontent.com/oslook/clash-freenode/main/clash.yaml",
@@ -55,16 +52,16 @@ def get_yaml_content(url):
 
     content = result.content.decode('utf-8')
     pattern = re.compile(r'(name|password|ws-path|type|protocol-param|obfs-param|server|servername|cipher|protocol|obfs'
-                         r'|network|Host|uuid): ([^,\{\}\n"]+)([,\}\n])')
+                         r'|network|Host|uuid): [ \'"]*([^,\{\}\n\'"]+)[ \'"]*([,\}\n])')
     #print(re.findall(pattern, content))
     content = re.sub(pattern, r'\1: "\2"\3', content)
     #print(content)
     pattern = re.compile(r'(tls|port|skip-cert-verify): [\'"]([^,\{\}\n"]+)[\'"]([,\}\n])')
-    print(re.findall(pattern, content))
+    #print(re.findall(pattern, content))
     content = re.sub(pattern, r'\1: \2\3', content)
 
     pattern = re.compile(r'(http-opts|h2-opts): [\'"]+([,\}\n])')
-    print(re.findall(pattern, content))
+    #print(re.findall(pattern, content))
     content = re.sub(pattern, r'\1: {}\2', content)
     return content
 
@@ -105,7 +102,8 @@ def get_all_proxies():
 def filter_proxies(proxies):
     ret_proxies = []
     for proxy in proxies:
-        not_support_cipher = ("none", "null", "rc4", "aes-256-gcm", "chacha20-ietf-poly1305")
+        #not_support_cipher = ("none", "null", "rc4", "aes-256-gcm", "chacha20-ietf-poly1305")
+        not_support_cipher = ("none", "null")
         if "cipher" in proxy.keys() and proxy["cipher"] in not_support_cipher:
             continue
         if "tls" in proxy.keys() and proxy["tls"] == "":
