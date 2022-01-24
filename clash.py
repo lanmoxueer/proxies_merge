@@ -105,7 +105,7 @@ def get_all_proxies():
 def filter_proxies(proxies):
     ret_proxies = []
     for proxy in proxies:
-        not_support_cipher = ("none", "null", "rc4", "aes-256-gcm")
+        not_support_cipher = ("none", "null", "rc4", "aes-256-gcm", "chacha20-ietf-poly1305")
         if "cipher" in proxy.keys() and proxy["cipher"] in not_support_cipher:
             continue
         if "tls" in proxy.keys() and proxy["tls"] == "":
