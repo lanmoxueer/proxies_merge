@@ -39,13 +39,4 @@ jobs:
                 git commit -m "`date '+%Y-%m-%d %H:%M:%S'`" #动态提交信息
                 git push -u origin main && echo "Git Pushed Origin"
               fi
-        - name: Mirror the Github organization repos to Gitee.
-          uses: Yikun/hub-mirror-action@v1.1
-          with:
-            src: github/lanmoxueer
-            dst: gitee/goldplan
-            dst_key: ${{ secrets.GITEE_RSA }}
-            dst_token: ${{ secrets.GITEE_TOKEN }}
-            white_list: "proxies_merge"
-            clone_style: "ssh"
-            debug: true
+        

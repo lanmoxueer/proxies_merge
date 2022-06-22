@@ -150,8 +150,8 @@ def write_yaml(all_proxies, names):
         #yaml.preserve_quotes = True
         #yaml.dump(data, output)
         ruamel.yaml.round_trip_dump(data, output, default_style='"')
-    with open("output.json", mode="w", encoding='utf-8') as output2:
-        json.dump(data, output2, ensure_ascii=False)
+    #with open("output.json", mode="w", encoding='utf-8') as output2:
+    #    json.dump(data, output2, ensure_ascii=False)
 
 
 def main():
