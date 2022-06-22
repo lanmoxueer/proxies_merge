@@ -110,7 +110,7 @@ def filter_proxies(proxies):
             continue
         if "port" in proxy.keys() and not isinstance(proxy["port"], int):
             continue
-        not_support_type = ("none", "null")
+        not_support_type = ("none", "null", "ssr")
         if "type" not in proxy.keys() or proxy["type"] in not_support_type:
             continue
         if "server" not in proxy.keys():
